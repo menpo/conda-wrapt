@@ -1,0 +1,16 @@
+build: false
+
+environment:
+  BINSTAR_KEY:
+    secure: +898Jq8ABUvA4m0m/9QaGB12v1SLy1WJAhW20irIFuDtWl6RVuEVuGRBzhDpKqko
+
+platform:
+- x86
+- x64
+
+init:
+- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/traviconda/master/traviconda.py' C:\\traviconda.py; echo "Done"
+- python C:\\traviconda.py setup 2 --channel menpo
+
+install:
+- C:\\Miniconda\\python C:\\traviconda.py auto ./conda --binstarchannel main --binstaruser menpo --binstarkey %BINSTAR_KEY%
