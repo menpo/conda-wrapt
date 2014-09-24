@@ -15,7 +15,7 @@ platform:
 
 init:
 - ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/traviconda/master/traviconda.py' C:\\traviconda.py; echo "Done"
-- python C:\\traviconda.py setup %PYTHON_VERSION --channel %BINSTAR_USER
+- python C:\\traviconda.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
-- C:\\Miniconda\\python C:\\traviconda.py auto ./conda --binstarchannel main --binstaruser %BINSTAR_USER --binstarkey %BINSTAR_KEY%
+- C:\\Miniconda\\python C:\\traviconda.py auto ./conda --binstarchannel main --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
