@@ -4,7 +4,6 @@ environment:
   global:
     BINSTAR_USER: menpo
     BINSTAR_KEY: temp
-    CONDACI_PATH: C:\\condaci.py
 
   matrix:
     - PYTHON_VERSION: 2
@@ -15,8 +14,8 @@ platform:
 - x64
 
 init:
-- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' %CONDACI_PATH%; echo Done
-- python %CONDACI_PATH% setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
+- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' condaci.py; echo Done
+- python condaci.py setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
 
 install:
-- C:\\Miniconda\\python %CONDACI_PATH% auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
+- C:\\Miniconda\\python condaci.py auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
