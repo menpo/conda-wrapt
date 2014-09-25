@@ -15,7 +15,7 @@ platform:
 
 init:
 - ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' C:\\condaci.py; echo Done
-- python C:\\condaci.py setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
+- python C:\\condaci.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
 - C:\\Miniconda\\python C:\\condaci.py auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
