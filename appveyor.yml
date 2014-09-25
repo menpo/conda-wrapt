@@ -16,4 +16,4 @@ init:
 - python C:\\traviconda.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
-- cmd /E:ON /V:ON /C "C:\cmd_in_env.cmd" "C:\Miniconda\Scripts\conda" build ./conda
+- cmd /E:ON /V:ON /C ""C:\cmd_in_env.cmd" "C:\Miniconda\Scripts\conda" build conda"
