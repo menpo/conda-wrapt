@@ -15,7 +15,7 @@ platform:
 - x64
 
 init:
-- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' %CONDACI_PATH%
+- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' %CONDACI_PATH%; echo Done
 - python %CONDACI_PATH% setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
 
 install:
