@@ -17,4 +17,5 @@ init:
 - python C:\\traviconda.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
+- set PYTHON_ARCH='64'
 - "%CMD_IN_ENV% C:\\Miniconda\\Scripts\\conda build conda"
