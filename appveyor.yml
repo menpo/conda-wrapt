@@ -16,4 +16,4 @@ init:
 - python C:\\traviconda.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
-- C:\\Miniconda\\python C:\\traviconda.py auto ./conda --binstarchannel main --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
+- cmd /E:ON /V:ON /C C:\\cmd_in_env.cmd C:\\Miniconda\\python C:\\traviconda.py auto ./conda --binstarchannel main --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
