@@ -14,8 +14,8 @@ platform:
 - x64
 
 init:
-- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' .\\condaci.py; echo Done
-- python condaci.py setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
+- ps: Start-FileDownload 'https://raw.githubusercontent.com/jabooth/condaci/master/condaci.py' C:\\condaci.py; echo Done
+- python C:\\condaci.py setup %PYTHON_VERSION% --binstarchannel %BINSTAR_USER%
 
 install:
-- C:\\Miniconda\\python condaci.py auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
+- C:\\Miniconda\\python C:\\condaci.py auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
