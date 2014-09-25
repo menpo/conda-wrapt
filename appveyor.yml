@@ -19,4 +19,4 @@ init:
 - python C:\\condaci.py setup %PYTHON_VERSION% --channel %BINSTAR_USER%
 
 install:
-- C:\\Miniconda\\python C:\\condaci.py auto conda --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
+- C:\\Miniconda\\python C:\\condaci.py auto conda --binstarchannel main --binstaruser %BINSTAR_USER% --binstarkey %BINSTAR_KEY%
